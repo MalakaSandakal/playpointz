@@ -107,12 +107,24 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="#" class="nav-link"> <i class="fas fa-truck"></i> Order and shipping </a></li>
-                    <li><a href="#" class="nav-link"> <i class="fas fa-bullhorn"></i> Campaigns </a></li>
-                    <li><a href="#" class="nav-link"> <i class="fas fa-user-friends"></i> User management </a></li>
-                    <li><a href="#" class="nav-link"> <i class="fas fa-exclamation-triangle"></i> Complains </a></li>
-                    <li><a href="#" class="nav-link"> <i class="fas fa-user-astronaut"></i> Player management </a></li>
-                    <li><a href="#" class="nav-link"> <i class="fas fa-cogs"></i> Settings </a></li>
+                    <li>
+                        <a href="#" class="nav-link"> <i class="fas fa-truck"></i> Order and shipping </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link"> <i class="fas fa-bullhorn"></i> Campaigns </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link"> <i class="fas fa-user-friends"></i> User management </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link"> <i class="fas fa-exclamation-triangle"></i> Complains </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link"> <i class="fas fa-user-astronaut"></i> Player management </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link"> <i class="fas fa-cogs"></i> Settings </a>
+                    </li>
                 </ul>
                 <hr />
                 <!-- <div class="dropdown"><i class="fa-solid fa-angles-left"></i></div> -->
@@ -130,77 +142,282 @@
                     </div>
                 </div>
 
-                <div class="table-section">
+                <div class="table-section" style="background-color: #FAFAFA;">
                     <div class="row g-4">
                         <div class="col-md-9">
                             <div class="row g-4">
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="card">
-										<h2>Active users</h2>
-										<h3>421</h3>
-									</div>
+                                        <h2>Active users</h2>
+                                        <h3>421</h3>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="card">
-										<h2>Today</h2>
-										<h3>41</h3>
-									</div>
+                                        <h2>Today</h2>
+                                        <h3>41</h3>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="card-no-shadow h-100">
-										<div class="row h-100">
-											<div class="col-md-3 round-progress-col align-items-center">
-												<div class="">
-													<div class="progress mx-auto" data-value='40'>
-													  <span class="progress-left"><span class="progress-bar border-primary"></span></span>
-													  <span class="progress-right"><span class="progress-bar border-primary"></span></span>
-													  <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-														<div class="h2 font-weight-bold">40 %</div>
-													  </div>
-													</div>
-												  </div>
-											</div>
-											<div class="col-md-7 align-items-center">
-												<div class="card-users-section">
-													<div class="users-heading-sec">
-														<h3>TOTAL USERS</h3>
-													</div>
-													<div class="green-arrow-div">													
-														<div class="up-right-arrow-sec">
-															<i class="fas fa-long-arrow-alt-up"></i>
-														</div>
-														<h3>+20,09 %</h3>
-													</div>
-													<div class="user-count-sec">
-														<h3>5000000</h3>
-														<h5>Compared to (300000 last year)</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+                                <div class="col-md-4">
+                                    <div class="card-no-shadow h-100 round-progress-card">
+                                        <div class="row h-100">
+                                            <div class="col-md-3 round-progress-col align-items-center">
+                                                <div class="">
+                                                    <div class="progress progress-round mx-auto" data-value="40">
+                                                        <span class="progress-left"><span class="progress-bar border-primary"></span></span>
+                                                        <span class="progress-right"><span class="progress-bar border-primary"></span></span>
+                                                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                                            <div class="h2 font-weight-bold">40 %</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9 align-items-center">
+                                                <div class="card-users-section">
+                                                    <div class="users-heading-sec">
+                                                        <h3>TOTAL USERS</h3>
+                                                    </div>
+                                                    <div class="green-arrow-div">
+                                                        <div class="up-right-arrow-sec">
+                                                            <i class="fas fa-long-arrow-alt-up"></i>
+                                                        </div>
+                                                        <h3>+20,09 %</h3>
+                                                    </div>
+                                                    <div class="user-count-sec">
+                                                        <h3>5000000</h3>
+                                                        <h5>Compared to (300000 last year)</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-md-12 chart-section">
+                                <h3>Mobile App Analysis</h3>
+                                <canvas id="myChart" width="" height=""></canvas>
+                            </div>
+                            <div class="col-md-12 chart-section">
+                                <h3>Quizzes</h3>
+                                <canvas id="bar-chart-grouped" width="" height=""></canvas>
+                            </div>
+                            
                         </div>
                         <div class="col-md-3">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi consequuntur id labore a culpa consectetur incidunt. Quidem magni iste earum, aliquam neque minima suscipit, harum voluptate minus
-                                dignissimos tenetur.
-                            </p>
+                            <div class="card-no-shadow right-card">
+                                <h3>Pointz</h3>
+                                <div class="inline-list">
+                                    <div class="list-item">
+                                        <div class="attr">
+                                            <h4>Total pointz</h4>
+                                        </div>
+                                        <div class="val">
+                                            <h4>15000</h4>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="attr">
+                                            <h4>Total store pointz</h4>
+                                        </div>
+                                        <div class="val">
+                                            <h4>1500000</h4>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="attr">
+                                            <h4>Highest PTZ user</h4>
+                                        </div>
+                                        <div class="val">
+                                            <h4>Nuwan</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-no-shadow right-card">
+                                <h3>Store</h3>
+                                <div class="inline-list">
+                                    <div class="list-item">
+                                        <div class="attr">
+                                            <h4>Active items</h4>
+                                        </div>
+                                        <div class="val">
+                                            <h4>120</h4>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="attr">
+                                            <h4>Pages pending</h4>
+                                        </div>
+                                        <div class="val">
+                                            <h4>450</h4>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="attr">
+                                            <h4>End items</h4>
+                                        </div>
+                                        <div class="val">
+                                            <h4>50</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-no-shadow right-card">
+                                <h3>Impressions by country</h3>
+                                <div class="inline-list country-impressions-inline-list">
+                                    <div class="country-item">
+                                        <div class="country-flag-sec">
+                                            <div class="flag-icon">
+                                                <img src="images/icons/flag-round-250.png" class="w-100" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="impressions-count-sec">
+                                            <div class="impressions-count-sec-inline-list">
+                                                <div class="country">
+                                                    <h5>Sri Lanka</h5>
+                                                </div>
+                                                <div class="count">
+                                                    <h6>110,002</h6>
+                                                </div>
+                                            </div>
+                                            <div class="progress progress-impression">
+                                                <div class="progress-bar w-75 progress-green" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="country-item">
+                                        <div class="country-flag-sec">
+                                            <div class="flag-icon">
+                                                <img src="images/icons/istockphoto-955320026-612x612.jpg" class="w-100" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="impressions-count-sec">
+                                            <div class="impressions-count-sec-inline-list">
+                                                <div class="country">
+                                                    <h5>United States</h5>
+                                                </div>
+                                                <div class="count">
+                                                    <h6>110,002</h6>
+                                                </div>
+                                            </div>
+                                            <div class="progress progress-impression">
+                                                <div class="progress-bar w-75 progress-yellow" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="country-item">
+                                        <div class="country-flag-sec">
+                                            <div class="flag-icon">
+                                                <img src="images/icons/transparent-country-icon-flag-icon-india-icon-5da7febeb5eb39.2589914715712908147451.jpg" class="w-100" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="impressions-count-sec">
+                                            <div class="impressions-count-sec-inline-list">
+                                                <div class="country">
+                                                    <h5>India</h5>
+                                                </div>
+                                                <div class="count">
+                                                    <h6>110,002</h6>
+                                                </div>
+                                            </div>
+                                            <div class="progress progress-impression">
+                                                <div class="progress-bar w-75 progress-red" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="country-item">
+                                        <div class="country-flag-sec">
+                                            <div class="flag-icon">
+                                                <img src="" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="impressions-count-sec">
+                                            <div class="impressions-count-sec-inline-list">
+                                                <div class="country">
+                                                    <h5>United States</h5>
+                                                </div>
+                                                <div class="count">
+                                                    <h6>110,002</h6>
+                                                </div>
+                                            </div>
+                                            <div class="progress progress-impression">
+                                                <div class="progress-bar w-75 progress-pink" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-		  
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
         <script src="js/dashboard-main.js"></script>
         <script>
             $("input:checkbox").on("click", function (e) {
                 e.stopImmediatePropagation();
                 var checked = e.currentTarget.checked ? false : true;
                 e.currentTarget.checked = checked ? false : checked.toString();
+            });
+        </script>
+        <script>
+            const ctx = document.getElementById("myChart").getContext("2d");
+            const myChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [
+                        {
+                            label: "App Installs",
+                            data: [6, 8, 3, 5, 2, 3],
+                            backgroundColor: ["#DB5AEE"],
+                            borderColor: ["#DB5AEE"],
+                            borderWidth: 2,
+                        },
+                        {
+                            label: "App Uninstalls",
+                            data: [3, 5, 6, 1, 2, 3],
+                            backgroundColor: ["#EA3A3D"],
+                            borderColor: ["#EA3A3D"],
+                            borderWidth: 2,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+
+            new Chart(document.getElementById("bar-chart-grouped"), {
+                type: 'bar',
+                data: {
+                labels: ["1900", "1950", "1999", "2050","1900", "1950", "1999", "2050"],
+                datasets: [
+                    {
+                    label: "Done",
+                    backgroundColor: "#1AD598",
+                    data: [133,221,783,478,13,421,283,678]
+                    }, {
+                    label: "Time Out",
+                    backgroundColor: "#EA3A3D",
+                    data: [408,547,675,734,428,567,475,234]
+                    }
+                ]
+                },
+                options: {
+                title: {
+                    display: true,
+                    text: 'Population growth (millions)'
+                }
+                }
             });
         </script>
     </body>
