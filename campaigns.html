@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="css/dashboard-main.css" />
+        <title>Playpoints - Campaigns</title>
+    </head>
+
+    <body>
+        <div class="navbar-section">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <a class="navbar-brand" href="#"><img src="images/login-logo.png" alt="" class="top-logo" /></a>
+                    </div>
+                    <div class="top-bar-right-sec">
+                        <div class="search-form">
+                            <form class="d-flex">
+                                <div class="search-field-top-right">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                </div>
+                                <button class="btn btn-search" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="notification-section">
+                            <button type="button" class="btn position-relative">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="profile-details-section">
+                            <div class="pro-pic">
+                                <img src="images/profile-pic.webp" alt="" class="" />
+                            </div>
+                            <div class="pro-name">
+                                <h4>Ganidu</h4>
+                            </div>
+                        </div>
+						<div class="account-settings-section">
+							<div class="acc-setting-list">
+								<ul>
+									<li><a href="">Profile</a></li>
+									<li><a href="">Email</a></li>
+									<li><a href="">Security</a></li>
+									<li><a href=""><i class="fas fa-power-off"></i>Sign out</a></li>
+								</ul>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="bg-section"></div>
+        <main>
+            <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-menu-list-section" style="width: 280px;">
+                <ul class="nav nav-pills flex-column mb-auto sidebar-ul">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" aria-current="page"><i class="fas fa-tachometer-alt"></i> Dashboard </a>
+                    </li>
+                    <li>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#quizess-accord" aria-expanded="true" aria-controls="quizess-accord">
+                                        <i class="fas fa-clipboard-list"></i> Quizzes
+                                    </button>
+                                </h2>
+                                <div id="quizess-accord" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="active"><a href="">list 1</a></li>
+                                            <li><a href="">list 2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#items-accord" aria-expanded="true" aria-controls="items-accord">
+                                        <i class="fas fa-hdd"></i> Items
+                                    </button>
+                                </h2>
+                                <div id="items-accord" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="active"><a href="">list 1</a></li>
+                                            <li><a href="">list 2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav-link"> <i class="fas fa-truck"></i> Order and shipping </a></li>
+                    <li class="active"><a href="#" class="nav-link"> <i class="fas fa-bullhorn"></i> Campaigns </a></li>
+                    <li><a href="#" class="nav-link"> <i class="fas fa-user-friends"></i> User management </a></li>
+                    <li><a href="#" class="nav-link"> <i class="fas fa-exclamation-triangle"></i> Complains </a></li>
+                    <li><a href="#" class="nav-link"> <i class="fas fa-user-astronaut"></i> Player management </a></li>
+                    <li><a href="#" class="nav-link"> <i class="fas fa-cogs"></i> Settings </a></li>
+                </ul>
+                <hr />
+                <!-- <div class="dropdown"><i class="fa-solid fa-angles-left"></i></div> -->
+            </div>
+            <div class="page-content">
+                <div class="page-top">
+                    <div class="page-content-small-heading">
+                        <h3>Campaigns</h3>
+                    </div>
+                    <div class="right-btn-section">
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#create-campaign-modal">New Campaign</button>
+                    </div>
+                </div>
+
+                <div class="table-section">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form class="form-search-sub">
+                                <input type="text" placeholder="Search campaign" class="search-page-sub">
+                                <button class="btn btn-search-sub">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="right-selector-section">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                        Status
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                                        <li><a class="dropdown-item" href="#">Status 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Status 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Status 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Campaign Name</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Impressions</th>
+                                    <th scope="col">Placements</th>
+                                    <th scope="col">Start Date</th>
+                                    <th scope="col">End Date</th>
+                                    <th scope="col">Pointz</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="ended-span">Ended</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Playpointz</th>
+                                    <td><span class="inprogress-span">In Progress</span></td>
+                                    <td>1000</td>
+                                    <td>Store</td>
+                                    <td>26-11-2021</td>
+                                    <td>26-12-2021</td>
+                                    <td>1500</td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-campaign-modal">
+                                            <img src="images/icons/edit.png" alt="" />
+                                        </button>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-campaign-modal">
+                                            <img src="images/icons/delete.png" alt="" />
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Create Item -->
+            <div class="modal fade" id="create-campaign-modal" tabindex="-1" aria-labelledby="create-campaign-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="create-campaign-modalLabel">New Campaign</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label for="">Campaign Name</label>
+                                    <input type="text" class="" />
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Placement</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">Feed</option>
+                                        <option value="2">Store</option>
+                                        <option value="3">Feed & Store</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Primary text</label>
+                                    <input type="text" class="" />
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input type="file" class="custom-file-input" id="file" multiple onchange="javascript:updateList()" />
+                                    <label class="custom-file-label" for="file">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+                                        </svg>
+                                        Add Attachments
+                                    </label>
+                                    <ul id="fileList" class="file-list"></ul>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="">Website URL</label>
+                                    <input type="text" class="" />
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="rel-pos">
+                                <div class="shedule-form">
+                                    <form>
+                                        <div class="pickers">
+                                            <div class="form-group">
+                                                <label for="">Date</label>
+                                                <input type="date" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="">Time</label>
+                                                <input type="time" />
+                                            </div>
+                                        </div>
+                                        <div class="schedule-btn-sec">
+                                            <button class="btn btn-outline" id="item-add-schedule-cancel">Cancel</button>
+                                            <button class="btn btn-save">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="inline-flex">
+                                <button type="button" class="btn cancel-btn-modal" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" id="item-add-schedule-btn">Schedule</button>
+                                <button type="button" class="btn create-btn-modal">Publish now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Edit -->
+            <div class="modal fade" id="edit-campaign-modal" tabindex="-1" aria-labelledby="edit-campaign-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="create-campaign-modalLabel">Edit Campaign</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label for="">Campaign Name</label>
+                                    <input type="text" class="" />
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Placement</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">Feed</option>
+                                        <option value="2">Store</option>
+                                        <option value="3">Feed & Store</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Primary text</label>
+                                    <input type="text" class="" />
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input type="file" class="custom-file-input" id="file" multiple onchange="javascript:updateList()" />
+                                    <label class="custom-file-label" for="file">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+                                        </svg>
+                                        Add Attachments
+                                    </label>
+                                    <ul id="fileList" class="file-list"></ul>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="">Website URL</label>
+                                    <input type="text" class="" />
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="inline-flex">
+                                <button type="button" class="btn cancel-btn-modal" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn create-btn-modal">End now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Delete -->
+            <div class="modal fade" id="delete-campaign-modal" tabindex="-1" aria-labelledby="delete-campaign-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered delete-modal-dailog">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <h5 class="modal-title">Are you sure?</h5>
+                            <hr />
+                            <button type="button" class="btn create-btn-modal">Delete</button>
+                            <button type="button" class="btn cancel-btn-modal" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="js/dashboard-main.js"></script>
+        <script>
+            updateList = function () {
+                var input = document.getElementById("file");
+                var output = document.getElementById("fileList");
+                var children = "";
+                for (var i = 0; i < input.files.length; ++i) {
+                    children += "<li>" + input.files.item(i).name + '<span class="remove-list" onclick="return this.parentNode.remove()">X</span>' + "</li>";
+                }
+                output.innerHTML = children;
+            };
+
+            $("#item-add-schedule-btn").click(function () {
+                $(".shedule-form").addClass("show");
+            });
+
+            $("#item-add-schedule-cancel").click(function (event) {
+                if ($(".shedule-form").hasClass("show")) {
+                    $(".shedule-form").removeClass("show");
+                    event.preventDefault();
+                } else {
+                    return;
+                }
+            });
+        </script>
+    </body>
+</html>
