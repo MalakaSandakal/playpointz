@@ -80,7 +80,7 @@ main{
 }
 .page-content{
     width: 100%;
-    padding-left: 290px;
+    padding-left: 270px;
     padding-right: 20px;
     padding-bottom: 50px;
     background-color: #E5E5E5;
@@ -121,6 +121,7 @@ main{
     padding-top: 5px !important;
     position: fixed;
     left: 0;
+    width: 260px;
 }
 .sidebar-menu-list-section ul{
     list-style: none;
@@ -144,6 +145,10 @@ main{
 } 
 .sidebar-menu-list-section ul .accordion-button:not(.collapsed){
     box-shadow: none;
+    color: #ff5a1a;
+}
+.sidebar-menu-list-section ul .accordion-button:not(.collapsed)::after{
+    color: #000000;
 }
 .accordion-button::after{
     background-image: none;
@@ -152,7 +157,6 @@ main{
     content: "\f078";
 }
 .accordion-button:not(.collapsed)::after{
-    color: #FF5A1A;
     background-image: none;
 }
 .sidebar-menu-list-section ul .accordion-body ul{
@@ -179,8 +183,12 @@ main{
     padding-bottom: 0px;
 }
 .accordion-body ul li{
-    margin-left: 10px;
+    margin-left: 0px;
     padding-bottom: 10px;
+    padding-top: 10px;
+}
+ul.sidebar-ul li.active a{
+    color: #FF5A1A;
 }
 .sidebar-menu-list-section ul li button i{
     margin-right: 15px;
@@ -205,6 +213,7 @@ ul.sidebar-ul li.active .accordion-button{
 }
 ul.sidebar-ul li .accordion-body a{
     text-decoration: none;
+    padding-left: 30px;
 }
 ul.sidebar-ul li .accordion-body{
     padding-left: 0px;
@@ -324,6 +333,16 @@ td span{
     padding-bottom: 2px;
     border-radius: 2px;
     border: 1px solid;
+}
+td span.hard-span{
+    color: #FF1818;
+    background: #FFE6E6;
+    border: 1px solid #FF9191;
+}
+td span.easy-span{
+    color: #52C41A;
+    background: #F6FFED;
+    border: 1px solid #B7EB8F;
 }
 td span.inprogress-span{
     border-color: #91D5FF;
@@ -773,34 +792,6 @@ td span.paid-span{
     padding-bottom: 20px;
     border: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-
 .progress-round {
     width: 80px;
     height: 80px;
@@ -917,7 +908,7 @@ td span.paid-span{
     font-family: 'Inter';
     font-weight: 500;
     font-size: 12px;
-    color: #A5BACB;
+    color: #9ca6af;
     margin-bottom: 0px;
     margin-top: 2px;
   }
@@ -958,13 +949,15 @@ td span.paid-span{
         font-family: 'Inter';
         font-weight: 500;
         font-size: 14px;
-        color: #A5BACB;
+        color: #9ca6af;
     }
     .card-no-shadow.right-card .inline-list{
         margin-top: 20px;
     }
     .round-progress-card{
         padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .round-progress-card .col-md-9{
         padding-left: 30px;
@@ -1043,6 +1036,7 @@ td span.paid-span{
         box-sizing: border-box;
         border-radius: 10px;
         padding: 25px;
+        position: relative;
     }
     .chart-section h3{
         font-family: 'Inter';
@@ -1050,3 +1044,270 @@ td span.paid-span{
         font-size: 14px;
         color: #06152B;
     }
+    .chart-section .dropdown-section{
+        margin-left: auto;
+        width: 15%;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    .chart-section .ds-2{
+        width: 30%;
+    }
+    .chart-section .ds-2 .btn-group{
+        float: right;
+    }
+    .chart-section .ds-2 .btn-group label{
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 12px;
+        color: #000000;
+        margin-bottom: 0px;
+        margin-top: 2px;
+        border: none !important;
+        background-color: #D9E1E7;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .radio-btn-1{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .radio-btn-3{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .btn-check:active+.btn, .btn-check:checked+.btn, .btn.active, .btn.dropdown-toggle.show, .btn:active {
+        background-color: black !important;
+        color: white !important;
+    }
+    .btn-check:active+.btn:focus, .btn-check:checked+.btn:focus, .btn.active:focus, .btn.dropdown-toggle.show:focus, .btn:active:focus {
+        box-shadow: none;
+    }
+    .chart-section .dropdown-section select{
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 14px;
+        color: #06152B;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .card-parent-col-1{
+        width: 30%;
+    }
+    .card-parent-col-2{
+        width: 40%;
+    }    
+    .page-content .page-top .right-btn-section .btn i{
+        margin-right: 10px;
+    }
+    .page-content .page-top .right-btn-section .outline-btn i{
+        color: #FF5A1A;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .bg-creamy{
+        background-color: #FAFAFA;
+        padding: 50px;
+        height: 100vh;
+    }
+    .bg-creamy form{
+        padding-top: 30px;
+    }
+    .bg-creamy form.top-15{
+        padding-top: 15px;
+    }
+    .bg-creamy form.top-15 button{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .bg-creamy h3{
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 14px;
+        color: #000000;
+    }
+    .bg-creamy h4{
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .bg-creamy h4 span{
+        color: black;
+        font-weight: 500;
+    }
+    .bg-creamy .form-group{
+        display: grid;
+    }
+    .bg-creamy label{
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 10px;
+    }
+    .bg-creamy input{
+        background: #FFFFFF;
+        border: 1px solid #D9D9D9;
+        border-radius: 2px;
+        padding-left: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .bg-creamy input::placeholder{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.25);
+    }
+    .bg-creamy button{
+        background-color: #FF5A1A;
+        border-radius: 2px;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 10px;
+        color: #FFFFFF;
+    }
+    .create-quiz-inline-inputs{
+        display: inline-flex;
+    }
+    
+    .create-quiz-inline-inputs .create-quiz-inline-input-item-1{
+        display: grid;
+        width: 100%;
+        padding-right: 15px;
+    }
+    .create-quiz-inline-inputs .create-quiz-inline-input-item-2 .input-section{
+        display: inline-flex;
+    }
+    .create-quiz-inline-inputs .create-quiz-inline-input-item-2 .input-section input{
+        margin-right: 10px;
+    }
+    .create-quiz-inline-inputs .create-quiz-inline-input-item-2 .input-group-text{
+        background-color: white;
+        padding: 5px;
+    }
+    .input-group-text img{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    tbody tr th, td{
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    @media(max-width:1700px){
+        .round-progress-card {
+            padding-left: 15px;
+        }
+        .progress-round{
+            width: 70px;
+            height: 70px;
+        }
+        .progress-value .h2{
+            font-size: 18px;
+        }
+        .card-no-shadow.right-card{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .sidebar-menu-list-section{
+            width: 250px;
+        }
+        .page-content{
+            padding-left: 260px;
+        }
+    }
+    @media(max-width:1500px){
+        .country-flag-sec .flag-icon{
+            height: 35px;
+            width: 35px;
+        }
+        .progress-round {
+            width: 60px;
+            height: 60px;
+        }
+        .sidebar-menu-list-section{
+            width: 230px;
+        }
+        .page-content{
+            padding-left: 240px;
+        }
+        .country h5, .count h6 {
+            font-size: 13px;
+        }
+        .progress-impression {
+            height: 8px;
+        }
+        .card-no-shadow.right-card .inline-list.country-impressions-inline-list {
+            margin-top: 25px;
+        }
+        .card-no-shadow.right-card .list-item{
+            margin-bottom: 5px;
+        }
+        .progress-value .h2{
+            font-size: 16px;
+        }
+        .round-progress-card .col-md-9 {
+            padding-left: 10px;
+        }
+        .up-right-arrow-sec {
+            background-color: #D1F7EA;
+            border-radius: 100%;
+            transform: rotate(35deg);
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-right: 7px;
+        }
+        .user-count-sec h3{
+            font-size: 13px;
+        }
+        .chart-section .dropdown-section{
+            width: 20%;
+        }
+        .chart-section .dropdown-section select {
+            font-size: 13px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .chart-section .ds-2 .btn-group label{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .round-progress-card {
+            padding-left: 10px;
+        }
+    }
+    @media(max-width:1340px){
+        .card-parent-col-1 {
+            width: 27.5%;
+        }
+        .card-parent-col-2 {
+            width: 45%;
+        }
+        .table-section .card{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+        .table-section .card h2{
+            font-size: 16px;
+        }
+        .table-section .card h3{
+            font-size: 25px;
+        }
+    }
+    

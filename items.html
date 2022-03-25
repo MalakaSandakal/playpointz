@@ -77,7 +77,7 @@
         </div>
         <div class="bg-section"></div>
         <main>
-            <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-menu-list-section" style="width: 280px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-menu-list-section">
                 <ul class="nav nav-pills flex-column mb-auto sidebar-ul">
                     <li class="nav-item">
                         <a href="#" class="nav-link" aria-current="page"><i class="fas fa-tachometer-alt"></i> Dashboard </a>
@@ -501,6 +501,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            <div id="image_preview">
+                                
+                            </div>
                             <form>
                                 <div class="form-group mb-3">
                                     <label for="">Item Name</label>
@@ -694,6 +697,7 @@
                 var output = document.getElementById("fileList");
                 var children = "";
                 for (var i = 0; i < input.files.length; ++i) {
+                    $('#image_preview').append("<img src='"+URL.createObjectURL(event.target.files[i])+"'><br>")
                     children += "<li>" + input.files.item(i).name + '<span class="remove-list" onclick="return this.parentNode.remove()">X</span>' + "</li>";
                 }
                 output.innerHTML = children;

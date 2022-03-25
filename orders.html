@@ -51,6 +51,16 @@
                                 <h4>Ganidu</h4>
                             </div>
                         </div>
+                        <div class="notifications-section">
+							<div class="notifications-list">
+								<ul>
+									<li><a href="">Notification 1<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur sunt, nobis, voluptatum veritatis sequi,</span></a></li>
+									<li><a href="">Notification 2<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur sunt, nobis, voluptatum veritatis sequi,</span></a></li>
+									<li><a href="">Notification 3<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur sunt, nobis, voluptatum veritatis sequi,</span></a></li>
+									<li><a href="">Notification 4<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur sunt, nobis, voluptatum veritatis sequi,</span></a></li>
+								</ul>
+							</div>
+						</div>
 						<div class="account-settings-section">
 							<div class="acc-setting-list">
 								<ul>
@@ -67,7 +77,7 @@
         </div>
         <div class="bg-section"></div>
         <main>
-            <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-menu-list-section" style="width: 280px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 sidebar-menu-list-section">
                 <ul class="nav nav-pills flex-column mb-auto sidebar-ul">
                     <li class="nav-item">
                         <a href="#" class="nav-link" aria-current="page"><i class="fas fa-tachometer-alt"></i> Dashboard </a>
@@ -321,6 +331,7 @@
                 var output = document.getElementById("fileList");
                 var children = "";
                 for (var i = 0; i < input.files.length; ++i) {
+                    ;
                     children += "<li>" + input.files.item(i).name + '<span class="remove-list" onclick="return this.parentNode.remove()">X</span>' + "</li>";
                 }
                 output.innerHTML = children;
